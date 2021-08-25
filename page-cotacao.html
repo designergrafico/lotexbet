@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LotexBet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="image/icone-site.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <header class="header-main">
+        <div class="container">
+            <div class="header">
+                <figure>
+                    <a href=""><img class="logo-main" src="image/LOGO.png" alt="Logo LotexBet"
+                            title="Logo LotexBet"></a>
+                </figure>
+                <nav class="menu-main">
+                    <ul>
+                        <li><a href="index.html">Apostar</a></li>
+                        <li><a href="page-regras.html">Regras</a></li>
+                        <li><a href="page-cotacao.html">Cotação</a></li>
+                        <li><a href="#" onclick="ModalCheck.open()">Meus Bilhetes</a></li>
+                        <li><a href="#" onclick="ModalLogin.open()">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-box-price container">
+        <h2 class="title-card">Cotação</h2>
+        <section class="price-content"> 
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th><img src="image/icone-site.png" alt=""> Seninha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="header-table-price">
+                        <td>Modalidade</td>
+                        <td>Cotação</td>
+                        <td>Valor minimo por aposta</td>
+                        <td>Valor máximo por aposta</td>
+                    </tr>
+
+                    <tr>
+                        <td data-title="Modalidade">Seninha - 19 Dezenas</td>
+                        <td data-title="Cotação">800x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 25,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Seninha - 25 Dezenas</td>
+                        <td data-title="Cotação">150x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Seninha - 30 Dezenas</td>
+                        <td data-title="Cotação">50x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Seninha - 35 Dezenas</td>
+                        <td data-title="Cotação">25x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th><img src="image/icone-site.png" alt=""> Quininha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="header-table-price">
+                        <td>Modalidade</td>
+                        <td>Cotação</td>
+                        <td>Valor minimo por aposta</td>
+                        <td>Valor máximo por aposta</td>
+                    </tr>
+
+                    <tr>
+                        <td data-title="Modalidade">Quininha - 19 Dezenas</td>
+                        <td data-title="Cotação">800x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 25,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Quininha - 25 Dezenas</td>
+                        <td data-title="Cotação">200x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Quininha - 30 Dezenas</td>
+                        <td data-title="Cotação">75x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Quininha - 35 Dezenas</td>
+                        <td data-title="Cotação">25x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th><img src="image/icone-site.png" alt=""> Lotinha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="header-table-price">
+                        <td>Modalidade</td>
+                        <td>Cotação</td>
+                        <td>Valor minimo por aposta</td>
+                        <td>Valor máximo por aposta</td>
+                    </tr>
+
+                    <tr>
+                        <td data-title="Modalidade">Lotinha - 17 Dezenas</td>
+                        <td data-title="Cotação">800x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 25,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Lotinha - 18 Dezenas</td>
+                        <td data-title="Cotação">200x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Lotinha - 19 Dezenas</td>
+                        <td data-title="Cotação">100x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Lotinha - 20 Dezenas</td>
+                        <td data-title="Cotação">50x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th><img src="image/icone-site.png" alt=""> Super Dupla</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="header-table-price">
+                        <td>Modalidade</td>
+                        <td>Cotação</td>
+                        <td>Valor minimo por aposta</td>
+                        <td>Valor máximo por aposta</td>
+                    </tr>
+
+                    <tr>
+                        <td data-title="Modalidade">Super Dupla - 12 Dezenas</td>
+                        <td data-title="Cotação">800x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 25,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Dupla - 18 Dezenas</td>
+                        <td data-title="Cotação">150x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Dupla - 20 Dezenas</td>
+                        <td data-title="Cotação">75x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Dupla - 25 Dezenas</td>
+                        <td data-title="Cotação">25x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th><img src="image/icone-site.png" alt=""> Super Mania</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="header-table-price">
+                        <td>Modalidade</td>
+                        <td>Cotação</td>
+                        <td>Valor minimo por aposta</td>
+                        <td>Valor máximo por aposta</td>
+                    </tr>
+
+                    <tr>
+                        <td data-title="Modalidade">Super Mania - 60 Dezenas</td>
+                        <td data-title="Cotação">800x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 25,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Mania - 60 Dezenas</td>
+                        <td data-title="Cotação">250x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Mania - 70 Dezenas</td>
+                        <td data-title="Cotação">75x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Mania - 75 Dezenas</td>
+                        <td data-title="Cotação">25x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th><img src="image/icone-site.png" alt=""> Super Sorte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="header-table-price">
+                        <td>Modalidade</td>
+                        <td>Cotação</td>
+                        <td>Valor minimo por aposta</td>
+                        <td>Valor máximo por aposta</td>
+                    </tr>
+
+                    <tr>
+                        <td data-title="Modalidade">Super Sorte - 13 Dezenas</td>
+                        <td data-title="Cotação">800x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 25,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Sorte - 17 Dezenas</td>
+                        <td data-title="Cotação">75x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Sorte - 18 Dezenas</td>
+                        <td data-title="Cotação">20x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Sorte - 19 Dezenas</td>
+                        <td data-title="Cotação">25x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th><img src="image/icone-site.png" alt=""> Super Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="header-table-price">
+                        <td>Modalidade</td>
+                        <td>Cotação</td>
+                        <td>Valor minimo por aposta</td>
+                        <td>Valor máximo por aposta</td>
+                    </tr>
+
+                    <tr>
+                        <td data-title="Modalidade">Super Time - 20 Dezenas</td>
+                        <td data-title="Cotação">800x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 25,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Time - 30 Dezenas</td>
+                        <td data-title="Cotação">100x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Time - 35 Dezenas</td>
+                        <td data-title="Cotação">50x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Modalidade">Super Time - 40 Dezenas</td>
+                        <td data-title="Cotação">25x1</td>
+                        <td data-title="Valor mínimo">R$: 1,00</td>
+                        <td data-title="Valor máximo">R$: 100,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <section class="modal-overlay-check">
+        <div class="check-ticket">
+            <h2 class="title-card">Conferir Bilhete</h2>
+            <div class="input-grounp">
+                <input type="text" placeholder="Por favor inserir o código do bilhete:">
+                <button onclick="ModalCheck.close(), ModalTicket.open()">Conferir</button>
+                <button class="btn-red" onclick="ModalCheck.close()">Cancelar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal-overlay-ticket">
+        <div class="ticket-finish">
+            <span class="close-icone" onclick="ModalTicket.close()">X</span>
+            <h2>LotexBet</h2>
+            <h3>WWW.LOTEXBET.COM</h3>
+            
+            <ul>
+                <li>Cliente: Joao Marcos</li>
+                <li>WhatsApp: (62) 9857777-9586</li>
+                <li>Colaborador: Lotexbet</li>
+                <li>Data: 14/08/2021</li>
+            </ul>
+
+            <ul>
+                <li>ID: 00001</li>
+                <li>Lotex-Sena</li>
+                <li>Data: 14/08 - Concurso: 25554</li>
+                <li class="numbers-ticket">01 02 05 07 08 09 10 11 14 18 19 22 24 26 28 29 30 35 38 40 42 45 49 50 51 52 54 58 59 60</li>
+                <li>Cotação: 25%</li>
+                <li>Valor: R$: 2,00</li>
+                <li>Retorno: R$: 5,00</li>
+            </ul>    
+
+            <ul>
+                <li>ID: 00001</li>
+                <li>Lotex-Sena</li>
+                <li>Data: 14/08 - Concurso: 25554</li>
+                <li class="numbers-ticket">01 02 05 07 08 09 10 11 14 18 19 22 24 26 28 29 30 35 38 40 42 45 49 50 51 52 54 58 59 60</li>
+                <li>Cotação: 25%</li>
+                <li>Valor: R$: 2,00</li>
+                <li>Retorno: R$: 5,00</li>
+            </ul>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, est dicta et expedita aperiam eligendi aut, excepturi doloremque ullam provident nostrum placeat! Exercitationem non, necessitatibus nostrum atque dolorum tempora ipsam.</p>
+
+            <div class="input-grounp">
+                <button class="btn-wapp">Enviar via WhatsApp</button>
+                <button>Imprimir</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal-overlay-pin">
+        <div class="modal-pin">
+            <span class="close-icone" onclick="ModalPin.close()">X</span>
+            <h2>Aposta inserida com sucesso! :)</h2>
+            <p>Para validar sua aposta, envie o código abaixo para o seu colaborador:</p>
+            <p class="number-pin">655584</p>
+            <div class="input-grounp">
+                <button class="btn-wapp">Enviar via WhatsApp</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal-overlay-login">
+        <div class="modal-login">
+            <span class="close-icone" onclick="ModalLogin.close()">X</span>
+            <h2 class="title-card">Faça seu login! :)</h2>
+            <div class="input-grounp">
+                <form action="">
+                    <label class="label-none" for="">Login</label>
+                    <input type="email" placeholder="Login">
+
+                    <label class="label-none" for="">Senha</label>
+                    <input type="password" placeholder="Senha">
+                    <button>Entrar</button>
+                    <button class="btn-red">Recuperar Senha</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>LotoBrazuca</strong></p>
+        <p>2021 &#169; Todos os direitos reservados</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

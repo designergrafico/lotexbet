@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LotexBet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="image/icone-site.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <header class="header-main">
+        <div class="container">
+            <div class="header">
+                <figure>
+                    <a href=""><img class="logo-main" src="image/LOGO.png" alt="Logo LotexBet"
+                            title="Logo LotexBet"></a>
+                </figure>
+                <nav class="menu-main">
+                    <ul>
+                        <li><a href="index.html">Apostar</a></li>
+                        <li><a href="page-regras.html">Regras</a></li>
+                        <li><a href="page-cotacao.html">Cotação</a></li>
+                        <li><a href="#" onclick="ModalCheck.open()">Meus Bilhetes</a></li>
+                        <li><a href="#" onclick="ModalLogin.open()">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-box-rules container">
+        <h2 class="title-card">Regras</h2>
+        <section class="rules-content"> 
+            <div class="header-rules-content">
+                <img src="image/termos-e-condicoes.png" alt=""> 
+                <h3>REGRAS DE VALORES:</h3>
+           </div>
+
+            <div class="body-rules-content">
+                <p><span>1.</span> O valor mínimo por aposta é de R$ 1,00.</p>
+                <p><span>2.</span> O valor máximo por aposta é de R$ 100,00.</p>
+                <p><span>3.</span> O valor máximo pago por bilhete sará de R$ 20.000,00.</p>
+                <p><span>4.</span> Os Prêmios até R$500,00 será efetuado o pagos em até 24 horas úteis.</p>
+                <p><span>5.</span> Prêmios superior a R$ 500,00 será efetuado o pagamento em até 72 horas úteis.</p>
+                <p><span>6.</span> Só pagaremos prêmios mediante a apresentação do bilhete (físico ou virtual).</p>
+            </div>
+
+            <div class="header-rules-content">
+                <img src="image/termos-e-condicoes.png" alt=""> 
+                <h3>TERMOS E CONDIÇÕES:</h3>
+           </div>
+
+           <div class="body-rules-content">
+                <p><span>1.</span> LotexBet e um site de apostas, através da web, portanto é proíbido o acesso de memores e dezoito anos. Ao participar dos jogos no site LOTEXBET o usuário afirma e garante que sua idade corresponde à maioridade legal, todas apostas registradas por menores de dezoito anos seram consideradas inválidas.</p>
+
+                <p><span>2.</span> Ao participar dos jogos no site LOTEXBET o usuário afirma que não há quaisquer restrições ou proibições em sua jurisdição, se houver o usuário assume a total responsabilidade pela sua participação no site.</p>
+                
+                <p><span>3.</span> Fica ciente a todos usuários do site LOTEXBET, que temos o total direito de negar o resgistro de apostas para determinadas pessoas sem razão específica.</p>
+                
+                <p><span>4.</span> Se o usuário tiver tentando aplicar práticas de desdobremento ou quaisquer outra fórmula de burlar o sistema de jogos, o usuário terá o bilhete concelado sem a devolução do valor apostado.</p>
+
+                <p><span>5.</span> O usuário tem o limite de vinte jogos por concurso em cada modalidade, sendo assim cada consurso o usuário poderar registra vinte apostas em cada bilhete gerado.</p>
+
+                <p><span>6.</span> Fica ciente a todos usuários do site LOTEXBET, que temos o total direito de alterar o valor das cotações sem aviso prévio de acordo com o fluxo de apostas. É total responsabilidade do usuario conferir as tabelas de cotações antes do registro de sua aposta.</p>
+
+                <p><span>7.</span> Fica ciente a todos usuários do site LOTEXBET, em caso de prêmiação fica em total responsabilidade do usuário a comunicação com um de nossos colaboradores para indicar uma conta bancária para ser efetuar o pagamento referente a prêmiação.</p>
+            </div>
+        </section>
+    </main>
+
+    <section class="modal-overlay-check">
+        <div class="check-ticket">
+            <h2 class="title-card">Conferir Bilhete</h2>
+            <div class="input-grounp">
+                <input type="text" placeholder="Por favor inserir o código do bilhete:">
+                <button onclick="ModalCheck.close(), ModalTicket.open()">Conferir</button>
+                <button class="btn-red" onclick="ModalCheck.close()">Cancelar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal-overlay-ticket">
+        <div class="ticket-finish">
+            <span class="close-icone" onclick="ModalTicket.close()">X</span>
+            <h2>LotexBet</h2>
+            <h3>WWW.LOTEXBET.COM</h3>
+            
+            <ul>
+                <li>Cliente: Joao Marcos</li>
+                <li>WhatsApp: (62) 9857777-9586</li>
+                <li>Colaborador: Lotexbet</li>
+                <li>Data: 14/08/2021</li>
+            </ul>
+
+            <ul>
+                <li>ID: 00001</li>
+                <li>Lotex-Sena</li>
+                <li>Data: 14/08 - Concurso: 25554</li>
+                <li class="numbers-ticket">01 02 05 07 08 09 10 11 14 18 19 22 24 26 28 29 30 35 38 40 42 45 49 50 51 52 54 58 59 60</li>
+                <li>Cotação: 25%</li>
+                <li>Valor: R$: 2,00</li>
+                <li>Retorno: R$: 5,00</li>
+            </ul>    
+
+            <ul>
+                <li>ID: 00001</li>
+                <li>Lotex-Sena</li>
+                <li>Data: 14/08 - Concurso: 25554</li>
+                <li class="numbers-ticket">01 02 05 07 08 09 10 11 14 18 19 22 24 26 28 29 30 35 38 40 42 45 49 50 51 52 54 58 59 60</li>
+                <li>Cotação: 25%</li>
+                <li>Valor: R$: 2,00</li>
+                <li>Retorno: R$: 5,00</li>
+            </ul>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, est dicta et expedita aperiam eligendi aut, excepturi doloremque ullam provident nostrum placeat! Exercitationem non, necessitatibus nostrum atque dolorum tempora ipsam.</p>
+
+            <div class="input-grounp">
+                <button class="btn-wapp">Enviar via WhatsApp</button>
+                <button>Imprimir</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal-overlay-pin">
+        <div class="modal-pin">
+            <span class="close-icone" onclick="ModalPin.close()">X</span>
+            <h2>Aposta inserida com sucesso! :)</h2>
+            <p>Para validar sua aposta, envie o código abaixo para o seu colaborador:</p>
+            <p class="number-pin">655584</p>
+            <div class="input-grounp">
+                <button class="btn-wapp">Enviar via WhatsApp</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal-overlay-login">
+        <div class="modal-login">
+            <span class="close-icone" onclick="ModalLogin.close()">X</span>
+            <h2 class="title-card">Faça seu login! :)</h2>
+            <div class="input-grounp">
+                <form action="">
+                    <label class="label-none" for="">Login</label>
+                    <input type="email" placeholder="Login">
+
+                    <label class="label-none" for="">Senha</label>
+                    <input type="password" placeholder="Senha">
+                    <button>Entrar</button>
+                    <button class="btn-red">Recuperar Senha</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>LotoBrazuca</strong></p>
+        <p>2021 &#169; Todos os direitos reservados</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

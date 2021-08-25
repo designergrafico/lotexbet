@@ -1,0 +1,906 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+:root{
+    --white: #ffffff;
+    --bg-white: #d6d6d6;
+    --color-font: #585858;
+    --matte-blue: #010c44;
+    --dark-blue: #010311;
+    --light-blue: #010527;
+    --yellow: #CDAD03;
+    --dark-yellow: #b39502;
+    --red: #B80601;
+    --dark-red: #8b0500;
+    --green: #34af23;
+    --dark-green: #2a911d;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 93.75%;
+}
+body{
+    background-color: var(--matte-blue);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.container{
+    width: 95vw;
+    margin: auto;
+}
+
+/********************** INPUTS & BUTTONS **********************/
+.input-grounp{
+    padding: .5rem .5rem .5rem .5rem;
+}
+.input-grounp input{
+    width: 100%;
+    padding: .5rem 0rem .5rem .5rem;
+    border: .14rem solid var(--dark-blue);
+    border-radius: .5rem;
+    margin-bottom: .3rem;
+}
+.input-grounp button{
+    width: 100%;
+    height: 3.5rem;
+    background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    border: none;
+    padding: 0;
+    border-radius: .5rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: .3s;
+    font-size: 1.1rem;
+}
+.input-grounp button:hover{
+    background-image: linear-gradient(to right, var(--dark-blue), var(--light-blue));
+}
+
+.input-grounp .btn-wapp{
+    background-image: linear-gradient(to right, var(--green), var(--dark-green));
+    transition: .3s;
+}
+.input-grounp .btn-wapp:hover{
+    background-image: linear-gradient(to right, var(--dark-green), var(--green));
+}
+
+.input-grounp .btn-red{
+    background-image: linear-gradient(to right, var(--red), var(--dark-red));
+}
+.input-grounp .btn-red:hover{
+    background-image: linear-gradient(to right, var(--dark-red), var(--red));
+}
+
+.label-none{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.input-bet{
+    padding-top: 0rem;
+}
+.input-bet label{
+    display: block;
+}
+.input-bet input{
+    width: 40%;
+    height: 2.5rem;
+}
+.input-bet button{
+    width: 19.5%;
+    height: 2.5rem;
+}
+/********************** INPUTS & BUTTONS **********************/
+
+/*************************** HEADER ***************************/
+.header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+.header-main{
+    padding: .5rem 0 .5rem 0;
+    background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+}
+.logo-main{
+    max-width: 200px;
+}
+.menu-main{
+    text-align: right;
+}
+.menu-main ul li{
+    display: inline-block;
+    margin-left: 1rem;
+}
+.menu-main ul li a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+.menu-main ul li a:hover{
+    color: var(--yellow);
+}
+/*************************** HEADER ***************************/
+
+/*************************** BANNER ***************************/
+.banner-main{
+    width: 100%;
+    height: 20vw;
+    max-height: 350px;
+    position: relative;
+}
+.banner-main img{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: absolute;
+    object-fit: cover;
+    transition: opacity 2000ms;
+}
+.banner-main img.selected{
+    opacity: 0;
+}
+/*************************** BANNER ***************************/
+
+/********************** MENU Modalidades **********************/
+.menu-games{
+    background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    display: flex;
+    justify-content: center;
+}
+.menu-games li{
+    list-style: none;
+    color: var(--white);
+    padding: .5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.menu-games li:hover{
+    color: var(--yellow);
+    transform: scale(1.1);
+    font-weight: 600;
+}
+.menu-games img{
+    width: 20%;
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: .2rem;
+}
+.menu-games li.activeMenuGame{
+    font-weight: 600;
+    color: var(--yellow) !important;
+    transform: scale(1.1);
+}
+.select-numbers>section{
+    animation: up .3s;
+}
+@keyframes up{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.menu-games-toggle{
+    display: none;
+}
+/********************** MENU Modalidades **********************/
+
+/************************** MAIN-BOX **************************/
+/*********** Geral ***********/
+.main-box{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+.title-card{
+    background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    border-bottom: .3rem solid var(--yellow);
+    color: var(--white);
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.card{
+    border-radius: 0 0 .3rem .3rem;
+    background-color: var(--white);
+}
+.card-container{
+    border-radius: 0 0 .3rem .3rem;
+    background-color: var(--white);
+    position: relative;
+}
+.card-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background-color: var(--matte-blue);
+    border-bottom: .8rem solid var(--matte-blue);
+}
+/*********** Geral ***********/
+
+/******** Ultimos Resultados ********/
+.day-game{
+    list-style: none;
+    padding: .5rem;
+    font-size: .7rem;
+    text-align: center;
+}
+.numbers-day-game{
+    list-style: none;
+    margin: .2rem 0 .2rem 0;
+}
+.numbers-day-game li{
+    display: inline-block;
+    padding: .8rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    color: var(--white);
+    font-size: .9rem;
+    margin: .1rem;
+}
+/******** Ultimos Resultados ********/
+
+/********** Proximos Jogos **********/
+/********** Proximos Jogos **********/
+
+/********* Seleção de jogos *********/
+.header-select-numbers{
+    margin: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+.header-select-numbers label{
+    font-weight: 500;
+    padding: .5rem ;
+}
+.header-select-numbers select{
+    width: 100%;
+    padding: .5rem 0rem .5rem .5rem;
+    border: .14rem solid var(--dark-blue);
+    border-radius: .5rem;
+    margin-top: .3rem;
+}
+
+.body-select-numbers{
+    margin: .5rem;
+    font-weight: 500;
+}
+.body-select-numbers-p{
+    border-top: .1rem solid var(--dark-blue);
+    border-bottom: .1rem solid var(--dark-blue);
+    padding: .5rem 0 .5rem .5rem ;
+}
+.ul-select-number{
+    border: .13rem solid var(--dark-blue);
+    border-radius: .3rem;
+    margin: .5rem 0 .5rem 0;
+    padding: .5rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+}
+.ul-select-number li{
+    list-style: none;
+    width: 100%;
+    min-height: 3rem;
+    border: .13rem solid var(--dark-blue);
+    border-radius: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.ul-select-number li:hover{
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.info-price{
+    display: flex;
+    justify-content: space-between;
+    border-top: .1rem solid var(--dark-blue);
+    border-bottom: .1rem solid var(--dark-blue);
+    padding: .3rem .5rem .3rem .5rem;
+    font-size: .9rem;
+    font-weight: 500;
+}
+.footer-select-numbers label{
+    font-weight: 500;
+    padding-left: .5rem;
+}
+.footer-select-numbers input{
+    margin-top: .5rem;
+}
+/********* Seleção de jogos *********/
+
+/******** Ticket - Pre Bilhete *******/
+.ticket{
+    overflow-y: scroll;
+    font-weight: 500;
+    padding: 0 .5rem;
+    max-height: 90vh;
+}
+.ticket ul{
+    list-style: none;
+    font-size: .8rem;
+    padding: .2rem 0 .2rem 0;
+    border-bottom: .14rem dotted var(--dark-blue);
+}
+
+.numbers-ticket ul{
+    border-top: .15rem dotted var(--dark-blue);
+    border-bottom: .15rem dotted var(--dark-blue);
+    margin: .2rem 0 .2rem 0;
+    padding: .2rem 0 .2rem 0;
+}   
+.numbers-ticket li{
+    display: inline-block;
+    padding: .6rem;
+    margin: .2rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    color: var(--white);
+}
+/***** Ticket - Pre Bilhete ****/
+/************************** MAIN-BOX **************************/
+
+/********************** All Modal-Overlay **********************/
+.modal-overlay-check,
+.modal-overlay-ticket,
+.modal-overlay-pin,
+.modal-overlay-login{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition: .5s;
+    overflow: auto;
+}
+.modal-overlay-check.active-modal,
+.modal-overlay-ticket.active-modal,
+.modal-overlay-pin.active-modal,
+.modal-overlay-login.active-modal{
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-icone{
+    font-weight: 500;
+    color: var(--red);
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.check-ticket,
+.ticket-finish,
+.modal-login{
+    width: 80%;
+    max-width: 500px;
+    max-height: 100%;
+    background-color: var(--white);
+    text-align: center;
+    overflow: auto;
+}
+.check-ticket input{
+    margin-top: .3rem;
+}
+.check-ticket button,
+.ticket-finish button,
+.modal-login button{
+    width: 49.5%;
+}
+.ticket-finish,
+.modal-pin{
+    max-width: 600px;
+    position: relative;
+    padding: .5rem;
+}
+
+
+.modal-pin{
+    background-color: var(--light-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+.modal-pin p{
+    margin-top: 1rem;
+}
+.number-pin{
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.header-ticket-finish-content{
+    border-bottom: var(--dark-blue) dotted .15rem;
+}
+
+.ticket-finish h2 img{
+    max-width:120px;
+}
+.ticket-finish ul{
+    color: var(--dark-blue);
+    font-weight: 500;
+    font-size: .9rem;
+    text-align: left;
+    padding-bottom: .2rem;
+}
+.header-ticket-finish{
+    border-bottom: .15rem dotted var(--dark-blue);
+    margin-bottom: .2rem;
+    list-style: none;
+}
+.ticket-finish-body{
+    margin-bottom: .2rem;
+    border-bottom: .15rem dotted var(--dark-blue);
+}
+.ticket-finish p{
+    font-weight: 500;
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
+
+.modal-login form{
+    margin-top: .5rem;
+}
+/********************** All Modal-Overlay **********************/
+
+/*************************** FOOTER ***************************/
+footer{
+    background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    border-top: .5rem solid var(--yellow);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+/*************************** FOOTER ***************************/
+
+/****************************************************************** PAGINA DE REGRAS ******************************************************************/
+.main-box-rules{
+    padding: .5rem 0 .5rem 0;
+}
+.rules-content{
+    padding: .5rem .5rem;
+    border-radius: 0 0 .3rem .3rem;
+    background-color: var(--white);
+}
+.header-rules-content{
+    display: flex;
+    align-items: center;
+}
+.header-rules-content img{
+    max-width: 25px;
+}
+.rules-content h3{
+    font-size: 1rem;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+.rules-content p{
+    padding: .9rem;
+    color: var(--dark-blue);
+}
+
+.body-rules-content span{
+    font-weight: 900;
+}
+/****************************************************************** PAGINA DE REGRAS ******************************************************************/
+
+/****************************************************************** PAGINA DE COTAÇÃO ******************************************************************/
+.main-box-price{
+    padding: .5rem 0 .5rem 0;
+}
+.price-content{
+    padding: .5rem;
+    background-color: var(--white);
+    border-radius: 0 0 .3rem .3rem;
+}
+
+.price-table{
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: .5rem;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+.price-table thead{
+    color: var(--white);
+    border-bottom: .2rem solid var(--yellow);
+    background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    text-align: left;
+    display: table-caption;
+    width: 100%;
+    padding: .5rem;
+}
+.price-table thead tr th{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.2rem;
+    background: none !important;
+}
+.price-table thead th img{
+    max-width: 25px;
+}
+
+.price-table tbody{
+    font-size: .9rem;
+}
+
+.price-table tbody tr td{
+    padding: .5rem;
+    display: table-cell;
+    position: relative;
+    border: solid 1px var(--dark-blue);
+}
+.price-table tbody tr:nth-child(odd){
+    background-color: var(--bg-white);
+}
+.price-table tbody tr:nth-child(even){
+    background-color: var(--white);
+}
+.header-table-price{
+    font-weight: 900;
+}
+/****************************************************************** PAGINA DE COTAÇÃO ******************************************************************/
+
+/****************************************************************** PAGINA DE CAMBISTAS ******************************************************************/
+.ul-painel li{
+    list-style: none;
+    padding: .5rem;
+    border-bottom: solid .1rem var(--bg-white);
+}
+.ul-painel li:last-child{
+    border-bottom: none;
+}
+.ul-painel li a{
+    color: var(--color-font);
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    transition: .3s;
+}
+.ul-painel li a:hover{
+    font-weight: 500;
+    color: var(--matte-blue);
+
+}
+.ul-painel li img{
+    max-width: 20px;
+}
+.ul-painel .painelActive{
+    color: var(--matte-blue);
+    font-weight: 500;
+}
+/****************************************************************** PAGINA DE CAMBISTAS ******************************************************************/
+
+/****************************************************************** PAGINA DE BILHETES ******************************************************************/
+.table-ticket{
+    height: 70vh;
+}
+#tb-tickets{
+    width: 100%;
+}
+#tb-tickets th{
+    padding: .5rem;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: .2rem;
+}
+#tb-tickets th:first-child{
+    width: 15%;
+}
+#tb-tickets th:last-child{
+    width: 10%;
+}
+#tb-tickets td{
+    border: .1rem solid var(--dark-blue);
+    border-radius: .2rem;
+    text-align: center;
+    padding: .1rem;
+}
+#tb-tickets td:nth-child(3),
+#tb-tickets td:nth-child(2){
+    width: 20%;
+}
+#tb-tickets td img{
+    max-width: 30px;
+}
+
+.cash-flow{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.cash-flow-content{ 
+    background-color: var(--bg-white);
+    color: var(--white);
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cash-status{
+    font-size: 1.3rem;
+}
+.cash-flow-content img{
+    width: 50px;
+}
+.cash-value{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.cash-value span{
+    font-size: 1rem;
+}
+.cash-inflow{
+    background-image: linear-gradient(to right, var(--green), var(--dark-green));
+}
+.cash-out{
+    background-image: linear-gradient(to right, var(--dark-red), var(--red));
+}
+.cash-commission{
+    background-image: linear-gradient(to right, var(--dark-yellow), var(--yellow));
+}
+.total-cash{
+    background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+}
+/****************************************************************** PAGINA DE BILHETES ******************************************************************/
+.pin-section .input-grounp input{
+    width: 78%;
+    height: 3rem;
+}
+.pin-section .input-grounp button{
+    width: 20%;
+    height: 3rem;
+}
+/****************************************************************** RESPANSIVE - MOBILE ******************************************************************/
+@media (max-width: 1100px){
+    html{
+        font-size: 80%;
+    }
+    .ul-select-number{
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .logo-main{
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 900px){
+    .logo-main{
+        max-width: 120px;
+    }
+    .main-box{
+        grid-template-columns: 1fr ;
+    }
+    .banner-main{
+        margin-bottom: 1rem;
+    }
+    /********************** Lista de modalidades **********************/
+    .menu-games{
+        display: none;
+    }
+    .menu-games-respansive img{
+        max-width: 30px;
+    }
+    .menu-games-toggle{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+        border-top: .3rem solid var(--yellow);
+        border-bottom: .3rem solid var(--yellow);
+        color: var(--white);
+        font-size: 1.1rem;
+        padding: .5rem; 
+    }
+
+    .menu-games-respansive.on{
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+    }
+    .menu-games-respansive.on .menu-games{
+        display: block;
+        background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+        margin: 0 1rem  0 1rem;
+        padding: 1rem 0 1rem 0;
+    }
+    .menu-games-respansive.on .menu-games-toggle{
+        background-image: linear-gradient(to right, var(--dark-blue), var(--light-blue));
+    }
+    .menu-games-respansive.on .menu-games-toggle .close-menuGame{
+        position: absolute;
+        top: 1.3rem;
+        right: 1.8rem;
+    }
+
+    .close-menuGame{
+        width: 20px;
+        height: 20px;
+        margin-top: -.5rem;
+    }
+
+    .one,
+    .two,
+    .tree{
+        background-color: white;
+        height: 3px;
+        width: 100%;
+        transition-duration: 0.3s;
+        margin: .3rem auto;
+    }
+    .menu-games-respansive.on .menu-games-toggle .one{
+        background-color: var(--red);
+        transform: rotate(45deg) translate(.22rem, .22rem);
+    }
+    .menu-games-respansive.on .menu-games-toggle .two{
+        opacity: 0;
+    }
+    .menu-games-respansive.on .menu-games-toggle .tree{
+        background-color: var(--dark-red);
+        transform: rotate(-45deg) translate(8px, -9.5px);
+    }
+    /********************** Lista de modalidades **********************/
+
+    .ul-select-number{
+        grid-template-columns: repeat(11, 1fr);
+    }
+    .header-select-numbers{
+        grid-template-columns: 1fr;
+    }
+    .ticket{
+        height: auto;
+    }
+    .input-ticket{
+        bottom: .5rem;
+        position: relative;
+    }
+    .input-bet button{
+        width: 19.2%;
+    }
+
+    .cash-flow{
+        grid-template-columns: 1fr 1fr;
+        font-size: 1rem;
+    }    
+    .cash-p{
+        font-size: 1.1rem;
+    }
+    .cash-value{
+        font-size: 1.5rem;
+    }
+
+    .header-table-price{
+        display: none !important;
+    }
+    .price-table{
+        width: 100%;
+    }
+    .price-table thead{
+        border-bottom: .35rem solid var(--yellow);
+    }
+    .price-table thead tr th{
+        background-color: var(--dark-blue);
+    }
+    .price-table thead th img{
+        max-width: 20px;
+    }
+    .price-table tbody tr td{
+        border: none;
+        border-bottom: .1rem solid var(--dark-blue);
+        display: block;
+        text-align: right;
+    }
+    .price-table tbody tr td:last-child{
+        border-bottom: none;
+    }
+    .price-table tbody tr{
+        border: .1rem solid var(--dark-blue);
+        margin-bottom: .5rem;
+        display: block;
+    }
+    .price-table tbody tr td:before{
+        content: attr(data-title);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        padding-left: .5rem;
+        font-weight: 900;
+        background-color: var(--bg-white);
+        width: 40%;
+        height: 100%;
+        text-align: left;
+    }
+    
+    .price-table tbody tr:nth-child(odd){
+        background-color: var(--white);
+    }
+}
+@media (max-width: 450px){
+    .logo-main{
+        max-width: 100px;
+    }
+    .menu-games-respansive.on .menu-games{
+        margin: 0 .8rem  0 .8rem;
+    }
+    .check-ticket button,
+    .ticket-finish button,
+    .modal-login button{
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+
+    .check-ticket button:last-child,
+    .ticket-finish button:last-child,
+    .modal-login button:last-child{
+        margin-bottom: 0rem;
+    }
+
+    .check-ticket,
+    .ticket-finish,
+    .modal-login{
+        width: 95%;
+        max-width: 500px;
+    }
+    
+    .input-bet input{
+        width: 39%;
+    }
+    .input-bet button{
+        width: 29%;
+    }
+    .input-bet .btn-red{
+        width: 100%;
+    }
+    .main-box{
+        grid-gap: .5rem;
+        margin-top: .5rem;
+    }
+    .ul-select-number{
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .pin-section .input-grounp input{
+        width: 100%;
+        height: 3rem;
+    }
+    .pin-section .input-grounp button{
+        width: 100%;
+        height: 5rem;
+    }
+}
